@@ -13,11 +13,8 @@ app.use(express.json());
 // connect to MongoDB
 connectDB();
 
-console.log(process.env.WC_CONSUMER_KEY);
-console.log(process.env.MONGO_URI);
-
 // routes
-app.use("/products", productRoutes);
+app.use("/api/products", productRoutes);
 
 const PORT = process.env.PORT || 4001;
 app.listen(PORT, () => console.log(`🚀 Product Service running on port ${PORT}`));
