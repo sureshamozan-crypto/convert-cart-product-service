@@ -58,6 +58,7 @@ router.get("/ingest", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
+  console.log("products");
   try {
     // Extract pagination & sorting from query params
     const page = parseInt(req.query.page) || 1;

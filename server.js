@@ -13,6 +13,9 @@ app.use(express.json());
 // connect to MongoDB
 connectDB();
 
+console.log(process.env.WC_CONSUMER_KEY);
+console.log(process.env.MONGO_URI);
+
 // routes
 app.use("/products", productRoutes);
 
