@@ -7,6 +7,14 @@ import productRoutes from "./src/routes/productRoutes.js";
 dotenv.config();
 const app = express();
 
+app.use(
+  cors({
+    origin: "*", // or specific domain like "https://yourfrontenddomain.com"
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: false,
+  })
+);
+
 app.use(cors());
 app.use(express.json());
 
